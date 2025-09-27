@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Create an account</h2>
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <div class="grid2">
+      <label>Full name {{ form.name(class="input") }}</label>
+      <label>Phone {{ form.phone(class="input") }}</label>
+      <label>Email {{ form.email(class="input") }}</label>
+      <label>Password {{ form.password(class="input") }}</label>
+    </div>
+    <label>Role {{ form.role(class="input") }}</label>
+    <div class="actions">
+      <button class="btn primary" type="submit">{{ form.submit.label.text }}</button>
+      <a class="btn" href="{{ url_for('home') }}">Cancel</a>
+    </div>
+  </form>
+  <p class="muted mt">We respect privacy and protect your data. This demo simulates SMS OTP in the server logs.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+Flask==3.0.2
+Flask-WTF==1.2.1
+email-validator==2.1.0.post1
+SQLAlchemy==2.0.32
+Flask-Login==0.6.3
+Flask-Migrate==4.0.7
+Werkzeug==3.0.3
+python-dotenv==1.0.1

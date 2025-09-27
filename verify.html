@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card narrow">
+  <h2>Verify your phone</h2>
+  <p class="muted">We sent a 6‑digit code to {{ phone }}. (Demo code: <strong>{{ otp_demo }}</strong>)</p>
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <label>Verification code {{ form.code(class="input") }}</label>
+    <div class="actions">
+      <button class="btn primary" type="submit">{{ form.submit.label.text }}</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

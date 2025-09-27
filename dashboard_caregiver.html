@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Caregiver dashboard</h2>
+<p class="muted">Overview of your connected seniors and alerts.</p>
+<div class="grid3 mt">
+  <div class="card">
+    <h3>Active alerts</h3>
+    <div class="alert warning">Social risk: Maria — no calls in 7 days</div>
+    <div class="alert info">Sleep below baseline: Maria 5.3 hrs</div>
+  </div>
+  <div class="card">
+    <h3>Seniors overview</h3>
+    <ul>
+      <li>Maria Gonzalez — Social risk high — Sleep low</li>
+      <li>Edward Kim — Activity declining</li>
+      <li>Rita Lopez — Stable</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Actions</h3>
+    <button class="btn primary">Schedule check‑in</button>
+    <button class="btn">Send encouragement</button>
+    <button class="btn">Share grocery list</button>
+  </div>
+</div>
+{% endblock %}

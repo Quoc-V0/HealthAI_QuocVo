@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome back, {{ current_user.name }}</h2>
+<p class="muted">Your virtual nurse & friend checks your day constantly — here’s the snapshot.</p>
+<div class="grid3 mt">
+  <div class="card"><div class="muted">Steps</div><div class="statv">{{ demo.steps }}</div></div>
+  <div class="card"><div class="muted">Sleep (hrs)</div><div class="statv">{{ demo.sleep }}</div></div>
+  <div class="card"><div class="muted">Heart</div><div class="statv">{{ demo.hr }} bpm</div></div>
+</div>
+<div class="card mt">
+  <h3>Insights</h3>
+  <ul>
+    {% for t, msg, level in insights %}
+      <li><strong>{{ t }}:</strong> {{ msg }}</li>
+    {% endfor %}
+  </ul>
+  <form method="post" action="{{ url_for('simulate') }}" class="actions">
+    <button class="btn" name="action" value="call_family">Call family</button>
+    <button class="btn" name="action" value="drop_activity">Simulate activity drop</button>
+    <button class="btn" name="action" value="improve_sleep">Improve sleep</button>
+  </form>
+</div>
+<div class="grid2 mt">
+  <div class="card">
+    <h3>Daily coaching</h3>
+    <ul>
+      <li>🕊️ Morning: Breathing (2 min)</li>
+      <li>🥗 Lunch: Add a vegetable</li>
+      <li>🚶‍♀️ Afternoon: 10‑minute walk</li>
+      <li>🌙 Evening: Reduce screens 30 minutes before bed</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Upcoming community events</h3>
+    <p>Art class — Today 3 PM — 10 min away</p>
+    <p>Chair Yoga — Tomorrow 10 AM</p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card narrow">
+  <h2>Log in</h2>
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <label>Email {{ form.email(class="input") }}</label>
+    <label>Password {{ form.password(class="input") }}</label>
+    <div class="actions">
+      <button class="btn primary" type="submit">{{ form.submit.label.text }}</button>
+      <a class="btn" href="{{ url_for('signup') }}">Create account</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

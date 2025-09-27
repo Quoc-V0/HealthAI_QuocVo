@@ -1,0 +1,32 @@
+:root { --indigo:#4f46e5; --slate:#475569; --bg:#f8fafc; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; background: var(--bg); color:#0f172a; }
+.container { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+.nav { position: sticky; top:0; background:#fff; border-bottom:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center; padding: .75rem 1.5rem; z-index:10;}
+.nav .brand { width:36px; height:36px; border-radius:50%; background:var(--indigo); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; }
+.nav a { margin:0 .5rem; color:#334155; text-decoration:none; }
+.nav a.primary { padding:.4rem .7rem; background:var(--indigo); color:#fff; border-radius:.4rem; }
+.hero { display:grid; grid-template-columns: 1fr; gap:1rem; }
+@media (min-width: 900px){ .hero{ grid-template-columns: 1.2fr .8fr; } }
+h1{ font-size: 2rem; margin:.2rem 0 .6rem; }
+h2{ margin:.2rem 0 .6rem; }
+.muted{ color:#64748b; font-size:.9rem; }
+.actions{ display:flex; gap:.6rem; margin-top:.6rem;}
+.btn{ padding:.6rem .9rem; border:1px solid #cbd5e1; border-radius:.5rem; background:#fff; cursor:pointer; text-decoration:none; color:#0f172a; display:inline-block;}
+.btn.primary{ background:var(--indigo); color:#fff; border-color:var(--indigo); }
+.card{ background:#fff; border:1px solid #e2e8f0; border-radius:.8rem; padding:1rem; }
+.narrow{ max-width:520px; margin: 0 auto; }
+.grid2{ display:grid; grid-template-columns: 1fr 1fr; gap:.8rem; }
+.grid3{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap:.8rem; }
+.statv{ font-size:1.4rem; font-weight:700; }
+.mt{ margin-top:1rem; }
+.flash{ margin-bottom: .5rem; }
+.alert{ padding:.6rem .8rem; border-radius:.5rem; margin:.4rem 0; border:1px solid #cbd5e1; }
+.alert.success{ background:#ecfeff; border-color:#06b6d4; }
+.alert.info{ background:#eef2ff; border-color:#6366f1; }
+.alert.warning{ background:#fff7ed; border-color:#f59e0b; }
+.alert.danger{ background:#fef2f2; border-color:#ef4444; }
+.input{ width:100%; padding:.6rem .7rem; border:1px solid #cbd5e1; border-radius:.5rem; }
+.footer{ border-top:1px solid #e2e8f0; padding:1rem 1.5rem; display:flex; justify-content:space-between; align-items:center; }
+.demo-header{ display:flex; justify-content:space-between; align-items:center; }
+.title-sm{ font-weight:700; }

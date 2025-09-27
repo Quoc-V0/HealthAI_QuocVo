@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LifeCompanion Ultra</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">LC</div>
+    <nav>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+      <a href="{{ url_for('privacy') }}">Privacy</a>
+      {% if current_user.is_authenticated %}
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('logout') }}">Sign out</a>
+      {% else %}
+        <a href="{{ url_for('login') }}">Log in</a>
+        <a class="primary" href="{{ url_for('signup') }}">Sign up</a>
+      {% endif %}
+    </nav>
+  </header>
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash">
+          {% for category, message in messages %}
+            <div class="alert {{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <div>© {{ 2025 }} LifeCompanion Ultra — Built with care.</div>
+    <div>
+      <a href="tel:+13055550142">+1 (305) 555‑0142</a> ·
+      <a href="mailto:support@lifecompanion.ai">support@lifecompanion.ai</a>
+    </div>
+  </footer>
+</body>
+</html>

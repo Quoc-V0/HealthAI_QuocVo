@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div>
+    <h1>A doctor. A nurse. A friend. In your pocket.</h1>
+    <p>Proactive risk detection, nutrition guidance, sleep coaching, and social wellbeing in one friendly assistant.</p>
+    <div class="actions">
+      <a class="btn primary" href="{{ url_for('signup') }}">Get started</a>
+      <a class="btn" href="{{ url_for('login') }}">Log in</a>
+    </div>
+    <div class="card">
+      <h3>Why it matters</h3>
+      <ul>
+        <li>Detect early decline in routines and mood.</li>
+        <li>Recommend real-world events and social connections.</li>
+        <li>Explain health suggestions in plain language.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="demo-header">
+      <div>
+        <div class="muted">Demo user</div>
+        <div class="title-sm">Maria Gonzalez (72)</div>
+      </div>
+      <div class="muted">Elder dashboard</div>
+    </div>
+    <div class="grid2">
+      <div class="stat"><div class="muted">Steps today</div><div class="statv">4,200</div></div>
+      <div class="stat"><div class="muted">Sleep (hrs)</div><div class="statv">5.3</div></div>
+      <div class="stat"><div class="muted">Heart rate</div><div class="statv">72 bpm</div></div>
+      <div class="stat"><div class="muted">Calls last week</div><div class="statv">0</div></div>
+    </div>
+    <div class="mt">
+      <strong>Recent insight:</strong>
+      <p>Reduced social contact (no calls in 7 days). Suggest: Join community art class at 3PM. <strong>High social risk</strong>.</p>
+      <div class="actions">
+        <a class="btn primary" href="{{ url_for('signup') }}">Join event</a>
+        <a class="btn" href="{{ url_for('signup') }}">Call family</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

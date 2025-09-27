@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card narrow">
+  <h2>Contact & Support</h2>
+  <p class="muted">For demo support or enterprise inquiries use the form below.</p>
+  <form method="post" class="mt">
+    <label>Your name <input name="name" class="input"></label>
+    <label>Email <input name="email" class="input"></label>
+    <label>Message <textarea name="message" class="input" rows="4"></textarea></label>
+    <div class="actions"><button class="btn primary" type="submit">Send</button></div>
+  </form>
+</div>
+{% endblock %}
